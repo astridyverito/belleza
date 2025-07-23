@@ -1,0 +1,221 @@
+<!DOCTYPE html>  
+<html lang="es"> <!-- idioma  -->
+<head>
+    <meta charset="UTF-8"> <!-- tildes  -->
+    <title> Estetica  </title>  <!--  titulo o nombre de la pagina -->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #FFC0CB;
+            margin: 0;
+        }
+        header {
+            background-image: url('https://hips.hearstapps.com/hmg-prod/images/ydray-0-portada-657b27ed6ea43.jpg');
+            background-size: cover;
+            background-position: center;
+            color:#7B68EE;
+            padding: 60px 20px;
+            text-align: center; 
+        }
+        header h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .producto {
+            background-color:#EE82EE;
+            width: 300px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .producto:hover {
+            transform: scale(1.03);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #BA55D3;
+        }
+        p {
+            font-size: 14px;
+            color: #BA55D3;
+        }
+        .boton-compra {
+            background-color: #FF0000;
+            color:white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .boton-compra:hover {
+            background-color: #EE82EE;
+        }
+        .contacto {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .contacto a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .contacto a:hover {
+            color: #2980b9;
+        }
+
+        /* Estilos para ventana emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-contenido {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            animation: entrada 0.5s ease;
+        }
+        .popup-contenido img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .popup-contenido h2 {
+            margin: 0 0 10px 0;
+        }
+        .cerrar {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #27ae90;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes entrada {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Eterno Beauty - Estetica </h1>
+</header>
+
+<section class="contenedor">
+
+    <div class="producto">
+        <img src="https://www.marketingdirecto.com/wp-content/uploads/2024/06/selena-gomez-rare-beauty.jpg" alt="Makeup">
+        <h2>Makeup</h2>
+        <p><strong>Q125</strong></p>
+        <p>sombra labial base rubor </p>
+        <button class="boton-compra" onclick="mostrarPopup('Makeup')">Comprar</button>
+    </div>
+	
+	 <div class="producto">
+        <img src="https://cdn.prod.website-files.com/5d1392024c653e635da785a5/6230e0ce0683f9bf98057db8_attractive-woman-getting-face-beauty-procedures-spa-salon.jpg" alt="exfoliante mascarillas idratantres">
+        <h2>tratamiento facial</h2>
+        <p><strong>Q100</strong></p>
+        <p>exfoliante mascarillas idratantres </p>
+        <button class="boton-compra" onclick="mostrarPopup('Makeup')">Comprar</button>
+    </div>
+	
+	 <div class="producto">
+        <img src="https://m.media-amazon.com/images/I/71xdlSNH0lL._AC_SL1500_.jpg" alt="corte de cabello para caballero">
+        <h2>corte de cabello para caballero </h2>
+        <p><strong>Q25 Q10 </strong></p>
+        <p> corte peinado </p>
+        <button class="boton-compra" onclick="mostrarPopup('Makeup')">Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/peluquerias-1657700133.jpg" alt="Cabello">
+        <h2>Cabello</h2>
+        <p><strong>Q70</strong></p>
+        <p>Alizado Risos Decoloración peinados </p>
+        <button class="boton-compra" onclick="mostrarPopup('Dell Inspiron 14')">Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="https://www.heraldousa.com/resizer/v2/SMFSICYQHRF3RI5UMKU6LMC2E4.jpg?auth=8db60bc7d7b9f7fb4e86772bf430578f1dfa661f7f7e8456155416ddbb748455&smart=true&width=773&height=718&quality=75" alt="Uñas"
+        <h2> Uñas </h2>
+        <p><strong>Q200</strong></p>
+        <p>esmalte tradicional o semipermanentes Top coat y base coat </p>
+        <button class="boton-compra" onclick="mostrarPopup('Lenovo IdeaPad 3')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="https://canalc.com.ar/wp-content/uploads/2021/07/cejas-y-pestanas.jpg" alt="laminadp de cejas y pestañas">
+        <h2>laminado de cejas y pestañas</h2>
+        <p><strong>Q150</strong></p>
+        <p>semipermanentes </p>
+        <button class="boton-compra" onclick="mostrarPopup('Makeup')">Comprar</button>
+    </div>
+	
+
+</section>
+
+<div class="contacto">
+    <h3>Contáctanos</h3>
+    <a href="https://wa.me/50212345678" target="_blank">📱 WhatsApp</a>
+    <a href="Melannyastrid739@gmail.com">📧 Correo</a>
+    <a href="tel:+50246795255">📞 Llamada</a>
+</div>
+
+
+<div class="popup" id="popup">
+    <div class="popup-contenido">
+        <img src="https://i.imgur.com/U9dFIdh.png" alt="Éxito">
+        <h2>¡Compra realizada!</h2>
+        <p id="mensajeProducto"></p>
+        <button class="cerrar" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+</div>
+
+<script>
+    function mostrarPopup(producto) {
+        document.getElementById("mensajeProducto").innerText = "Has comprado: " + producto + ". Te contactaremos pronto.";
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function cerrarPopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
+			
+			
+			
